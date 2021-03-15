@@ -9,7 +9,10 @@ function App({ Component, pageProps }: AppProps) {
         <title>Next Destination</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
-        <meta name="description" content="Destination explorer app" />
+        <meta
+          name="description"
+          content="simple world destination explorer app"
+        />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
