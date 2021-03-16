@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@styled-icons/material-rounded": "^10.28.0",
     "leaflet": "^1.7.1",
     "next": "10.0.8",
     "react": "17.0.1",
