@@ -1,13 +1,10 @@
 import HomeTemplate from 'templates/Home'
-import { GetPlacesQuery, Place } from 'graphql/generated/types'
 import client from 'graphql/client'
 import { GET_PLACES } from 'graphql/queries'
+import { GetPlacesQuery } from 'types/graphql'
+import { LightPlace } from 'types/global'
 
-type HomeProps = {
-  places: Place[]
-}
-
-export default function Home({ places }: HomeProps) {
+export default function Home({ places }: { places: LightPlace[] }) {
   return <HomeTemplate places={places} />
 }
 

@@ -2354,11 +2354,7 @@ export type GetPagesQuery = (
   { __typename?: 'Query' }
   & { pages: Array<(
     { __typename?: 'Page' }
-    & Pick<Page, 'id' | 'slug' | 'heading'>
-    & { body: (
-      { __typename?: 'RichText' }
-      & Pick<RichText, 'html'>
-    ) }
+    & Pick<Page, 'slug'>
   )> }
 );
 
@@ -2371,7 +2367,7 @@ export type GetPageBySlugQuery = (
   { __typename?: 'Query' }
   & { page?: Maybe<(
     { __typename?: 'Page' }
-    & Pick<Page, 'id' | 'slug' | 'heading'>
+    & Pick<Page, 'heading'>
     & { body: (
       { __typename?: 'RichText' }
       & Pick<RichText, 'html'>
@@ -2379,7 +2375,9 @@ export type GetPageBySlugQuery = (
   )> }
 );
 
-export type GetPlacesQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetPlacesQueryVariables = Exact<{
+  first?: Maybe<Scalars['Int']>;
+}>;
 
 
 export type GetPlacesQuery = (
@@ -2390,9 +2388,29 @@ export type GetPlacesQuery = (
     & { location: (
       { __typename?: 'Location' }
       & Pick<Location, 'latitude' | 'longitude'>
-    ), gallery: Array<(
+    ) }
+  )> }
+);
+
+export type GetPlaceBySlugQueryVariables = Exact<{
+  slug: Scalars['String'];
+}>;
+
+
+export type GetPlaceBySlugQuery = (
+  { __typename?: 'Query' }
+  & { place?: Maybe<(
+    { __typename?: 'Place' }
+    & Pick<Place, 'id' | 'name' | 'slug'>
+    & { location: (
+      { __typename?: 'Location' }
+      & Pick<Location, 'latitude' | 'longitude'>
+    ), description?: Maybe<(
+      { __typename?: 'RichText' }
+      & Pick<RichText, 'html'>
+    )>, gallery: Array<(
       { __typename?: 'Asset' }
-      & Pick<Asset, 'url'>
+      & Pick<Asset, 'url' | 'height' | 'width'>
     )> }
   )> }
 );
