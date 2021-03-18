@@ -1,20 +1,11 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { Place } from 'graphql/generated/types'
 
-type Place = {
-  id: string
-  name: string
-  slug: string
-  location: {
-    latitude: number
-    longitude: number
-  }
-}
-
-export type Props = {
+export type MapProps = {
   places?: Place[]
 }
 
-const Map = ({ places }: Props) => (
+const Map = ({ places }: MapProps) => (
   <MapContainer
     center={[0, 0]}
     zoom={3}
