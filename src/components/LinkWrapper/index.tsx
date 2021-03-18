@@ -1,4 +1,5 @@
 import Link from 'next/link'
+
 import * as S from './styles'
 
 type Props = {
