@@ -1,10 +1,16 @@
+import Image from 'next/image'
 import { Close } from '@styled-icons/material-rounded'
 import LinkWrapper from 'components/LinkWrapper'
 import { Place } from 'types/global'
 
 import * as S from './styles'
+import { useRouter } from 'next/dist/client/router'
 
 const PlaceTemplate = ({ place }: { place: Place }) => {
+  const router = useRouter()
+
+  if (router.isFallback) return null
+
   return (
     <>
       <LinkWrapper href="/">
@@ -20,7 +26,14 @@ const PlaceTemplate = ({ place }: { place: Place }) => {
           )}
           <S.Gallery>
             {place.gallery.map((image, index) => (
-              <img key={`photo-${index}`} src={image.url} />
+              <Image
+                key={`photo-${index}`}
+                src={image.url}
+                alt={place.name}
+                quality={75}
+                height={600}
+                width={1000}
+              />
             ))}
           </S.Gallery>
         </S.Container>
