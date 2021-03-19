@@ -1,10 +1,9 @@
 export default {
   title: 'Next Destination',
   description: 'Simple app created to play around with Next.js and maps.',
-  // TODO: update the url
-  canonical: 'https://www.url.ie/',
+  canonical: 'https://next-destination.gnbaron.com',
   openGraph: {
-    url: 'https://www.url.ie/',
+    url: 'https://next-destination.gnbaron.com',
     title: 'Next Destination',
     description: 'Simple app created to play around with Next.js and maps.',
     type: 'website',
@@ -12,7 +11,7 @@ export default {
     site_name: 'Next Destination',
     images: [
       {
-        url: 'https://www.url.ie/img/cover.png',
+        url: 'https://next-destination.gnbaron.com/img/cover.png',
         width: 684,
         height: 482,
         alt: 'Next Destination',

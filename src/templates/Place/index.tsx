@@ -18,8 +18,7 @@ const PlaceTemplate = ({ place }: { place: Place }) => {
         title={`${place.name} - Next Destination`}
         description={place.description?.text}
         openGraph={{
-          // TODO: update the url
-          url: 'https://www.url.ie/',
+          url: 'https://next-destination.gnbaron.com',
           title: `${place.name} - Next Destination`,
           description: place.description?.text,
           images: place.gallery[0]
