@@ -11,7 +11,7 @@ export default function Home({ places }: { places: LightPlace[] }) {
 export async function getStaticProps() {
   const { places } = await client.request<GetPlacesQuery>(GET_PLACES)
   return {
-    revalidate: 30,
+    revalidate: 21600, // 6h
     props: {
       places,
     },

@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!place) return { notFound: true }
 
   return {
-    revalidate: 30,
+    revalidate: 21600, // 6h
     props: {
       place,
     },
