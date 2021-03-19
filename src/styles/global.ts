@@ -7,8 +7,8 @@ const GlobalStyle = createGlobalStyle`
     --white: #eeeeee;
     --container: 100rem;
     --small: 1.5rem;
-    --medium: 3rem;
-    --large: 5rem;
+    --medium: 2.5rem;
+    --large: 4.5rem;
   }
 
   * {

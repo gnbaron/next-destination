@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
+export const Wrapper = styled.div`
+  padding: 8rem var(--medium);
+`
+
 export const Content = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
   margin: auto;
   max-width: var(--container);
   text-align: center;
