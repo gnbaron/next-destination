@@ -1,4 +1,6 @@
 export default {
+  title: 'Next Destination',
+  description: 'Simple app created to play around with Next.js and maps.',
   // TODO: update the url
   canonical: 'https://www.url.ie/',
   openGraph: {

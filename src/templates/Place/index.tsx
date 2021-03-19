@@ -22,14 +22,16 @@ const PlaceTemplate = ({ place }: { place: Place }) => {
           url: 'https://www.url.ie/',
           title: `${place.name} - Next Destination`,
           description: place.description?.text,
-          images: [
-            {
-              url: place.gallery[0].url,
-              width: place.gallery[0].width,
-              height: place.gallery[0].height,
-              alt: `${place.name}`,
-            },
-          ],
+          images: place.gallery[0]
+            ? [
+                {
+                  url: place.gallery[0].url,
+                  width: place.gallery[0].width,
+                  height: place.gallery[0].height,
+                  alt: `${place.name}`,
+                },
+              ]
+            : [],
         }}
       />
       <LinkWrapper href="/">
