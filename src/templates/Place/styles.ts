@@ -10,6 +10,7 @@ export const Container = styled.section`
 `
 
 export const Heading = styled.h1`
+  color: var(--highlight);
   font-size: var(--large);
   margin-bottom: var(--medium);
 `
