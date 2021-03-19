@@ -7,6 +7,7 @@ export type ImageResource = {
 export type Place = {
   description?: {
     html: string
+    text: string
   }
   gallery: ImageResource[]
   id: string

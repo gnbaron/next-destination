@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   p,
   a {
     font-size: 2rem;
-    line-height: var(--medium);
+    line-height: 3rem;
   }
 
   a {

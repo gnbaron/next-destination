@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import { Close } from '@styled-icons/material-rounded'
 import LinkWrapper from 'components/LinkWrapper'
@@ -13,6 +14,24 @@ const PlaceTemplate = ({ place }: { place: Place }) => {
 
   return (
     <>
+      <NextSeo
+        title={`${place.name} - Next Destination`}
+        description={place.description?.text}
+        openGraph={{
+          // TODO: update the url
+          url: 'https://www.url.ie/',
+          title: `${place.name} - Next Destination`,
+          description: place.description?.text,
+          images: [
+            {
+              url: place.gallery[0].url,
+              width: place.gallery[0].width,
+              height: place.gallery[0].height,
+              alt: `${place.name}`,
+            },
+          ],
+        }}
+      />
       <LinkWrapper href="/">
         <Close size={32} aria-label="Home" />
       </LinkWrapper>
