@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://next-destination.gnbaron.com
+
+# Sitemaps
+Sitemap: https://next-destination.gnbaron.com/sitemap.xml
